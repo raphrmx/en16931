@@ -11,8 +11,6 @@
 The European electronic invoice as Dart objects, with the 223 business rules
 that decide whether a receiver accepts it.
 
-Pure Dart. No XML, no HTTP, no Flutter, one dependency.
-
 ## Install
 
 ```yaml
@@ -74,11 +72,10 @@ the rule you can look up.
 
 ## Worth knowing up front
 
-Pass quantities, prices and rates as plain numbers. The builders read them
-exactly as written and hold them as `Decimal` from there on, because binary
-floating point does not survive a VAT breakdown. Dates go in as `DateTime`
-and come back as `CalendarDate`, a day with no time and no zone, so nothing
-shifts the invoice date by a day across a time zone.
+Pass quantities, prices and rates as plain numbers, and dates as `DateTime`.
+Amounts are read exactly as written and held as `Decimal`. Dates come back as
+`CalendarDate`, a day with no time and no zone, so an invoice date never
+shifts by a day.
 
 An invoice that was issued elsewhere goes through the unnamed constructor
 instead, with its own breakdown and totals. It keeps the figures it went out
@@ -98,24 +95,27 @@ InvoiceTypeCode.creditNote;    // 381
 const InvoiceTypeCode('875');  // partial construction invoice
 ```
 
-An identifier says which register it came from, because the number alone is
-not findable. `Scheme` names the ones that come up.
+An identifier says which register it came from. `Scheme` names the ones that
+come up.
 
 ```dart
 Identifier('0123456749', scheme: Scheme.belgianEnterprise);
 Identifier('5412345678901', scheme: Scheme.gtin);
 ```
 
-They are constants and not an enum: the codes are drawn from different lists
-depending on the term that carries them, those lists are revised on their own
-schedule, and a profile narrows some of them. Any other code from the same
-list is written as it is.
-
 ## What it does not do
 
-Writing the invoice out as UBL or CII belongs to a syntax package, and the
-extra rules of Peppol, XRechnung or Factur-X to a profile package. Sending it
-is a different problem again. This is the document, checked.
+This is the document, checked. Writing it out and adding the rules of a
+country or a network are packages of their own, built on this one.
+
+| | |
+| --- | --- |
+| [en16931_ubl](https://pub.dev/packages/en16931_ubl) | Writes and reads UBL 2.1, the syntax most of Europe sends |
+| [en16931_cii](https://pub.dev/packages/en16931_cii) | Writes and reads UN/CEFACT CII, the one France and Germany read |
+| [en16931_peppol](https://pub.dev/packages/en16931_peppol) | The rules Peppol BIS Billing 3.0 adds |
+| [en16931_xrechnung](https://pub.dev/packages/en16931_xrechnung) | The rules Germany adds |
+
+Sending the invoice is a different problem again, and no package here does it.
 
 ## License
 

@@ -271,6 +271,32 @@ void main() {
       );
       expect(invoice.specificationIdentifier, en16931Specification);
     });
+
+    test('carries the references a buyer books the invoice against', () {
+      final invoice = Invoice.fromLines(
+        number: '1',
+        issueDate: DateTime(2026, 9, 13),
+        seller: _seller,
+        buyer: _buyer,
+        buyerReference: 'REF-1',
+        purchaseOrderReference: 'PO-77812',
+        contractReference: 'V-2026-11',
+        tenderReference: 'LOT-3',
+        lines: [
+          InvoiceLine.of(
+            id: '1',
+            item: const Item(name: 'A thing'),
+            quantity: 1,
+            unitPrice: 10,
+            vatRate: 21,
+          ),
+        ],
+      );
+      expect(invoice.buyerReference, 'REF-1');
+      expect(invoice.purchaseOrderReference, 'PO-77812');
+      expect(invoice.contractReference, 'V-2026-11');
+      expect(invoice.tenderReference, 'LOT-3');
+    });
   });
 
   group('exact', () {

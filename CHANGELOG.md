@@ -1,3 +1,12 @@
+## 0.1.1
+
+- `Invoice.fromLines` takes the purchase order reference (BT-13), the contract
+  reference (BT-12) and the tender or lot reference (BT-17). They were
+  reachable only through the unnamed constructor, which meant working out the
+  breakdown and the totals by hand to carry one of them.
+- The README names the syntax and profile packages built on this one rather
+  than alluding to them.
+
 ## 0.1.0
 
 First release.
