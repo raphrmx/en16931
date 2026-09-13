@@ -11,6 +11,7 @@ export 'src/codes/code_value.dart';
 export 'src/codes/invoice_type_code.dart';
 export 'src/codes/lists.g.dart';
 export 'src/codes/payment_means_code.dart';
+export 'src/codes/schemes.dart';
 export 'src/codes/unit_code.dart';
 export 'src/codes/vat_category.dart';
 export 'src/model/address.dart';

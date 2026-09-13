@@ -70,6 +70,11 @@ First release.
   left over is written out: the delivery an intra-community supply has to
   name, the exclusivity an invoice outside the scope of VAT demands, and the
   two rules that hold only for Italian split payment.
+- `Scheme` names the registers an identifier is issued under, 0208 for the
+  Belgian enterprise register and 0088 for a GS1 location among them. They are
+  constants rather than an enum, because the codes come from several lists
+  depending on which term carries them and those lists are revised without the
+  standard being revised. A test holds every name to the published lists.
 - A test fails when a rule of the catalogue has no answer, so what is covered
   is a fact rather than a claim.
 - No XML, no HTTP, no Flutter. Writing the model out as UBL or CII, and the

@@ -49,7 +49,11 @@ enum RuleFamily {
   vatCeutaAndMelilla('BR-AG'),
 
   /// BR-B. An invoice mixing VAT categories that cannot be mixed.
-  vatCategoryMix('BR-B');
+  vatCategoryMix('BR-B'),
+
+  /// A rule a profile adds on top of the standard. Its identifier is the
+  /// profile's own, so no prefix here claims it.
+  profile('');
 
   const RuleFamily(this.prefix);
 
@@ -60,6 +64,7 @@ enum RuleFamily {
   static RuleFamily? of(String id) {
     RuleFamily? found;
     for (final family in values) {
+      if (family.prefix.isEmpty) continue;
       if (!id.startsWith('${family.prefix}-')) continue;
       // BR-CO-10 starts with BR- as well, so the longest prefix wins.
       if (found == null || family.prefix.length > found.prefix.length) {

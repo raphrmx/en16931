@@ -16,7 +16,8 @@ void main() {
       name: 'COMAPPS SRL',
       tradingName: 'ComApps',
       vatIdentifier: 'BE0123456789',
-      electronicAddress: Identifier('0123456789', scheme: '0208'),
+      electronicAddress:
+          Identifier('0123456789', scheme: Scheme.belgianEnterprise),
       address: Address(
         line1: 'Rue Example 1',
         city: 'Bruxelles',
@@ -28,7 +29,8 @@ void main() {
     buyer: const Buyer(
       name: 'Client SA',
       vatIdentifier: 'BE0987654321',
-      electronicAddress: Identifier('0987654321', scheme: '0208'),
+      electronicAddress:
+          Identifier('0987654321', scheme: Scheme.belgianEnterprise),
       address: Address(
         line1: 'Avenue Example 2',
         city: 'Namur',
@@ -57,7 +59,7 @@ void main() {
         id: '2',
         item: const Item(
           name: 'Printed manual',
-          standardIdentifier: Identifier('5412345678901', scheme: '0160'),
+          standardIdentifier: Identifier('5412345678901', scheme: Scheme.gtin),
         ),
         quantity: 4,
         unitPrice: 15.00,

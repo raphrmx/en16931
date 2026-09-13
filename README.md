@@ -98,6 +98,19 @@ InvoiceTypeCode.creditNote;    // 381
 const InvoiceTypeCode('875');  // partial construction invoice
 ```
 
+An identifier says which register it came from, because the number alone is
+not findable. `Scheme` names the ones that come up.
+
+```dart
+Identifier('0123456749', scheme: Scheme.belgianEnterprise);
+Identifier('5412345678901', scheme: Scheme.gtin);
+```
+
+They are constants and not an enum: the codes are drawn from different lists
+depending on the term that carries them, those lists are revised on their own
+schedule, and a profile narrows some of them. Any other code from the same
+list is written as it is.
+
 ## What it does not do
 
 Writing the invoice out as UBL or CII belongs to a syntax package, and the

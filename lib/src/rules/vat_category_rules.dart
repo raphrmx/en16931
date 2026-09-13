@@ -387,22 +387,31 @@ Iterable<RuleViolation> _taxableAmount(
   RuleDescriptor rule,
   _VatProfile p,
 ) sync* {
+  // Only a category that may appear more than once splits its taxable amount
+  // by rate. The others carry one entry, and the standard sums everything of
+  // that category into it without looking at a rate. Splitting them by rate
+  // too would report a breach whenever a document states a rate of zero on
+  // the breakdown and none on the lines, which is correct and common.
+  final byRate = p.cardinality == _Cardinality.atLeastOne;
+
   for (final (index, entry) in invoice.vatBreakdown.indexed) {
     if (entry.category != p.category) continue;
+    bool matches(Decimal? rate) => !byRate || _sameRate(rate, entry.rate);
+
     final lines = _linesOf(
       invoice,
       p.category,
-    ).where((line) => _sameRate(line.vatRate, entry.rate));
+    ).where((line) => matches(line.vatRate));
     final allowances = _entriesOf(
       invoice,
       p.category,
       AllowanceOrCharge.allowance,
-    ).where((item) => _sameRate(item.vatRate, entry.rate));
+    ).where((item) => matches(item.vatRate));
     final charges = _entriesOf(
       invoice,
       p.category,
       AllowanceOrCharge.charge,
-    ).where((item) => _sameRate(item.vatRate, entry.rate));
+    ).where((item) => matches(item.vatRate));
 
     final expected = sum(lines.map((line) => line.netAmount)) +
         sum(charges.map((item) => item.amount)) -
