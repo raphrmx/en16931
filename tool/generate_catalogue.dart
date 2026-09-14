@@ -15,12 +15,24 @@ import 'dart:io';
 
 import 'package:xml/xml.dart';
 
-const String _ublUrl =
-    'https://raw.githubusercontent.com/ConnectingEurope/eInvoicing-EN16931/'
-    'master/ubl/schematron/preprocessed/EN16931-UBL-validation-preprocessed.sch';
-const String _ciiUrl =
-    'https://raw.githubusercontent.com/ConnectingEurope/eInvoicing-EN16931/'
-    'master/cii/schematron/preprocessed/EN16931-CII-validation-preprocessed.sch';
+/// The release the artefacts are read from.
+///
+/// A tag rather than a branch, so that generating the catalogue twice gives
+/// the same catalogue twice. The CEN revises the artefacts several times a
+/// year, and reading from a moving branch leaves the package saying which
+/// rules it covers without being able to say against what.
+///
+/// Raising this is a deliberate act: bump it, regenerate, and read what the
+/// diff says before committing it.
+const String artefactRelease = 'validation-1.3.16';
+
+const String _base =
+    'https://raw.githubusercontent.com/ConnectingEurope/eInvoicing-EN16931';
+
+const String _ublUrl = '$_base/$artefactRelease/ubl/schematron/preprocessed/'
+    'EN16931-UBL-validation-preprocessed.sch';
+const String _ciiUrl = '$_base/$artefactRelease/cii/schematron/preprocessed/'
+    'EN16931-CII-validation-preprocessed.sch';
 
 const String _artefactsDirectory = 'artefacts';
 const String _output = 'lib/src/rules/catalogue.g.dart';
@@ -71,6 +83,16 @@ Future<void> main(List<String> arguments) async {
     ..sort((a, b) => _compareIdentifiers(a.id, b.id));
 
   File(_output).writeAsStringSync(_emit(catalogue, versions));
+
+  // The emitted lists run past the column the formatter wraps at, so what is
+  // written and what is committed would differ by a reflow. Formatting here
+  // keeps them the same file, which is what lets the build compare them.
+  final formatted = Process.runSync('dart', ['format', _output]);
+  if (formatted.exitCode != 0) {
+    stderr.writeln('dart format failed: ${formatted.stderr}');
+    exitCode = 1;
+    return;
+  }
 
   stdout.writeln('${catalogue.length} rules written to $_output');
   stdout.writeln('  artefacts ${versions.join(', ')}');
@@ -181,6 +203,13 @@ String _emit(List<_Rule> rules, Set<String> versions) {
     ..writeln('// terms it bears on.')
     ..writeln()
     ..writeln("import 'package:en16931/src/rules/rule.dart';")
+    ..writeln()
+    ..writeln('/// The release of the artefacts the catalogue was read from.')
+    ..writeln('///')
+    ..writeln('/// A receiver rejecting an invoice names the rule it rejected')
+    ..writeln('/// on. This says which revision of the rules that identifier')
+    ..writeln('/// was read from, so the two can be lined up.')
+    ..writeln("const String en16931ArtefactRelease = '$artefactRelease';")
     ..writeln()
     ..writeln('/// Every business rule EN 16931 defines.')
     ..writeln('///')

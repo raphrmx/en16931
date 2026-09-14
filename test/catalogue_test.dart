@@ -16,6 +16,13 @@ void main() {
       expect(ruleCatalogue, hasLength(223));
     });
 
+    test('says which release of the artefacts it was read from', () {
+      // The generator reads a tag rather than a branch, so generating twice
+      // gives the same catalogue twice. Without it the package could say
+      // which rules it covers without being able to say against what.
+      expect(en16931ArtefactRelease, 'validation-1.3.16');
+    });
+
     test('gives every rule a family', () {
       for (final rule in ruleCatalogue) {
         expect(RuleFamily.of(rule.id), rule.family, reason: rule.id);

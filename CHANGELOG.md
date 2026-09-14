@@ -5,6 +5,10 @@
   of document.
 - The licence badge and the licence section point at the licence page on
   pub.dev. The README carries no link off to a code host any more.
+- The rule catalogue is generated from a pinned release of the artefacts,
+  `validation-1.3.16`, rather than from whatever the CEN branch held that day.
+  `en16931ArtefactRelease` says which one, so a rule identifier a receiver
+  rejects on can be lined up with the revision it was read from.
 
 ## 0.1.1
 

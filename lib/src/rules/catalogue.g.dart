@@ -8,6 +8,13 @@
 
 import 'package:en16931/src/rules/rule.dart';
 
+/// The release of the artefacts the catalogue was read from.
+///
+/// A receiver rejecting an invoice names the rule it rejected
+/// on. This says which revision of the rules that identifier
+/// was read from, so the two can be lined up.
+const String en16931ArtefactRelease = 'validation-1.3.16';
+
 /// Every business rule EN 16931 defines.
 ///
 /// The list is read from the published validation artefacts,
@@ -373,7 +380,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-102',
       'BG-23',
-      'BT-118',
+      'BT-118'
     ],
   ),
   RuleDescriptor(
@@ -425,7 +432,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-99',
       'BT-151',
       'BT-95',
-      'BT-102',
+      'BT-102'
     ],
   ),
   RuleDescriptor(
@@ -452,7 +459,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-102',
       'BG-23',
-      'BT-118',
+      'BT-118'
     ],
   ),
   RuleDescriptor(
@@ -508,7 +515,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-152',
       'BT-103',
-      'BT-96',
+      'BT-96'
     ],
   ),
   RuleDescriptor(
@@ -535,7 +542,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-102',
       'BG-23',
-      'BT-118',
+      'BT-118'
     ],
   ),
   RuleDescriptor(
@@ -591,7 +598,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-152',
       'BT-103',
-      'BT-96',
+      'BT-96'
     ],
   ),
   RuleDescriptor(
@@ -1032,7 +1039,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-102',
       'BG-23',
-      'BT-118',
+      'BT-118'
     ],
   ),
   RuleDescriptor(
@@ -1084,7 +1091,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-99',
       'BT-151',
       'BT-95',
-      'BT-102',
+      'BT-102'
     ],
   ),
   RuleDescriptor(
@@ -1111,7 +1118,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-102',
       'BG-23',
-      'BT-118',
+      'BT-118'
     ],
   ),
   RuleDescriptor(
@@ -1163,7 +1170,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-99',
       'BT-151',
       'BT-95',
-      'BT-102',
+      'BT-102'
     ],
   ),
   RuleDescriptor(
@@ -1190,7 +1197,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-102',
       'BG-23',
-      'BT-118',
+      'BT-118'
     ],
   ),
   RuleDescriptor(
@@ -1242,7 +1249,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-99',
       'BT-151',
       'BT-95',
-      'BT-102',
+      'BT-102'
     ],
   ),
   RuleDescriptor(
@@ -1281,7 +1288,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-102',
       'BG-23',
-      'BT-118',
+      'BT-118'
     ],
   ),
   RuleDescriptor(
@@ -1333,7 +1340,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-99',
       'BT-151',
       'BT-95',
-      'BT-102',
+      'BT-102'
     ],
   ),
   RuleDescriptor(
@@ -1384,7 +1391,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-102',
       'BG-23',
-      'BT-118',
+      'BT-118'
     ],
   ),
   RuleDescriptor(
@@ -1440,7 +1447,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-152',
       'BT-103',
-      'BT-96',
+      'BT-96'
     ],
   ),
   RuleDescriptor(
@@ -1467,7 +1474,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-95',
       'BT-102',
       'BG-23',
-      'BT-118',
+      'BT-118'
     ],
   ),
   RuleDescriptor(
@@ -1519,7 +1526,7 @@ const List<RuleDescriptor> ruleCatalogue = [
       'BT-99',
       'BT-151',
       'BT-95',
-      'BT-102',
+      'BT-102'
     ],
   ),
   RuleDescriptor(
