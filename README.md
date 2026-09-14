@@ -2,10 +2,10 @@
 
 # EN 16931
 
-[![Build](https://img.shields.io/github/actions/workflow/status/raphrmx/en16931/ci.yml?branch=main&label=build)](https://github.com/raphrmx/en16931/actions/workflows/ci.yml)
+![Build](https://img.shields.io/github/actions/workflow/status/raphrmx/en16931/ci.yml?branch=main&label=build)
 [![Pub Version](https://img.shields.io/pub/v/en16931?color=blue)](https://pub.dev/packages/en16931)
 [![Maintainer](https://img.shields.io/badge/Maintainer-Raphael_Vrient-purple)](https://pub.dev/publishers/comapps.be/packages)
-[![License](https://img.shields.io/badge/Licence-MIT-blue)](/LICENSE)
+[![License](https://img.shields.io/badge/Licence-MIT-blue)](https://pub.dev/packages/en16931/license)
 ![Maintenance](https://img.shields.io/badge/Maintained-yes-success)
 
 The European electronic invoice as Dart objects, with the 223 business rules
@@ -15,7 +15,7 @@ that decide whether a receiver accepts it.
 
 ```yaml
 dependencies:
-  en16931: ^0.1.0
+  en16931: ^0.1.2
 ```
 
 ## Build an invoice
@@ -114,9 +114,17 @@ country or a network are packages of their own, built on this one.
 | [en16931_cii](https://pub.dev/packages/en16931_cii) | Writes and reads UN/CEFACT CII, the one France and Germany read |
 | [en16931_peppol](https://pub.dev/packages/en16931_peppol) | The rules Peppol BIS Billing 3.0 adds |
 | [en16931_xrechnung](https://pub.dev/packages/en16931_xrechnung) | The rules Germany adds |
+| [en16931_facturx](https://pub.dev/packages/en16931_facturx) | The five levels France issues at, and the hybrid PDF |
 
-Sending the invoice is a different problem again, and no package here does it.
+Getting the invoice to the buyer is a choice of channel, not of document:
+over Peppol, through a French PDP, or as a PDF in an email. The same invoice
+serves all three.
 
 ## License
 
-MIT.
+Released under the [MIT licence](https://pub.dev/packages/en16931/license).
+
+The rules and the code lists are generated from the validation artefacts the
+CEN publishes, which are EUPL 1.2. None of their content is redistributed:
+what is taken from them is which rules exist, how severe each is and which
+terms it bears on.

@@ -1,3 +1,11 @@
+## 0.1.2
+
+- The README lists `en16931_facturx` among the packages built on this one, and
+  says that getting an invoice to the buyer is a choice of channel rather than
+  of document.
+- The licence badge and the licence section point at the licence page on
+  pub.dev. The README carries no link off to a code host any more.
+
 ## 0.1.1
 
 - `Invoice.fromLines` takes the purchase order reference (BT-13), the contract
