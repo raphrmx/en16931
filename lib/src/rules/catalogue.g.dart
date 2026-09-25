@@ -13,12 +13,16 @@ import 'package:en16931/src/rules/rule.dart';
 /// A receiver rejecting an invoice names the rule it rejected
 /// on. This says which revision of the rules that identifier
 /// was read from, so the two can be lined up.
+///
+/// {@category validation}
 const String en16931ArtefactRelease = 'validation-1.3.16';
 
 /// Every business rule EN 16931 defines.
 ///
 /// The list is read from the published validation artefacts,
 /// so it is complete by construction rather than by memory.
+///
+/// {@category validation}
 const List<RuleDescriptor> ruleCatalogue = [
   RuleDescriptor(
     id: 'BR-01',

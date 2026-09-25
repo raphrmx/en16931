@@ -1,0 +1,22 @@
+# The sidebar follows the order the library is read in: build an invoice, with
+# the value types it is made of, pointing at the code lists the standard names,
+# then check it.
+dartdoc:
+  categories:
+    invoice:
+      displayName: The invoice
+      markdown: doc/topics/the_invoice.md
+    values:
+      displayName: Values
+      markdown: doc/topics/values.md
+    codes:
+      displayName: Code lists
+      markdown: doc/topics/code_lists.md
+    validation:
+      displayName: Validation
+      markdown: doc/topics/validation.md
+  categoryOrder:
+    - invoice
+    - values
+    - codes
+    - validation

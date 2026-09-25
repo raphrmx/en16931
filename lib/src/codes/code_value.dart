@@ -4,6 +4,8 @@
 /// standard being revised, so a code is held as the string it is rather than
 /// as a closed set. The subclasses name the codes that come up, and any other
 /// code from the same list can be written out by hand.
+///
+/// {@category codes}
 abstract base class CodeValue {
   /// Holds [value] as it appears in the list.
   const CodeValue(this.value);

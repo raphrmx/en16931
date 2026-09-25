@@ -209,6 +209,8 @@ String _emit(List<_Rule> rules, Set<String> versions) {
     ..writeln('/// A receiver rejecting an invoice names the rule it rejected')
     ..writeln('/// on. This says which revision of the rules that identifier')
     ..writeln('/// was read from, so the two can be lined up.')
+    ..writeln('///')
+    ..writeln('/// {@category validation}')
     ..writeln("const String en16931ArtefactRelease = '$artefactRelease';")
     ..writeln()
     ..writeln('/// Every business rule EN 16931 defines.')
@@ -219,6 +221,8 @@ String _emit(List<_Rule> rules, Set<String> versions) {
     ..writeln(
       '/// so it is complete by construction rather than by memory.',
     )
+    ..writeln('///')
+    ..writeln('/// {@category validation}')
     ..writeln('const List<RuleDescriptor> ruleCatalogue = [');
   for (final rule in rules) {
     final family = _dartFamily(_family(rule.id));

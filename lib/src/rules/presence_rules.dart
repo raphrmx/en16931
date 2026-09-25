@@ -11,6 +11,8 @@ import 'package:en16931/src/rules/support.dart';
 /// Each entry is the rule the standard publishes under that identifier. The
 /// meaning is implemented here against the semantic model, and the identifier
 /// is the only thing the catalogue and this map share.
+///
+/// {@category validation}
 const Map<String, RuleCheck> presenceRules = {
   'BR-01': _br01,
   'BR-02': _br02,
@@ -59,6 +61,8 @@ const Map<String, RuleCheck> presenceRules = {
 /// model asks for the term in its constructor and the type carries no empty
 /// value. A syntax package parsing an invoice from XML has to check them
 /// itself, since what it reads was not built here.
+///
+/// {@category validation}
 const Map<String, String> presenceSatisfiedByConstruction = {
   'BR-03': 'Invoice.issueDate is required, and a CalendarDate is a date.',
   'BR-08': 'Seller.address is required.',

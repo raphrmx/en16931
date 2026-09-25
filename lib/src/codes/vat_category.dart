@@ -4,6 +4,8 @@
 /// Unlike the other lists the standard points at, this one is closed: the
 /// business rules name these codes one by one and attach a different set of
 /// conditions to each.
+///
+/// {@category codes}
 enum VatCategory {
   /// S. Standard rate. The rate is above zero and VAT is charged.
   standardRate('S'),

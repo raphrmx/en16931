@@ -8,6 +8,8 @@ import 'package:en16931/src/types/identifier.dart';
 ///
 /// The period says when the supply happened, which is what decides the VAT
 /// period it falls in. At least one of the two ends has to be given.
+///
+/// {@category invoice}
 final class DatePeriod {
   /// The period running from [start] to [end], either of which may be left
   /// out when only one end is known.
@@ -61,6 +63,8 @@ final class SupportingDocument {
 ///
 /// Both syntaxes base64 the bytes, so the model holds them as bytes and
 /// leaves the encoding to the syntax.
+///
+/// {@category invoice}
 final class Attachment {
   /// The file [bytes], of type [mimeCode] and named [filename].
   const Attachment({

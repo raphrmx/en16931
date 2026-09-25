@@ -8,6 +8,8 @@ import 'package:en16931/src/types/amount.dart';
 import 'package:en16931/src/types/identifier.dart';
 
 /// BG-25. One line of the invoice.
+///
+/// {@category invoice}
 final class InvoiceLine {
   /// A line numbered [id], selling [quantity] of [item] for [netAmount].
   const InvoiceLine({
@@ -124,6 +126,8 @@ final class InvoiceLine {
 /// The net price is the price after any discount, and it is the one the line
 /// amount is worked out from. The gross price and the discount are there to
 /// show how the net price was arrived at.
+///
+/// {@category invoice}
 final class Price {
   /// A net price of [netPrice], for [baseQuantity] of the item.
   const Price({

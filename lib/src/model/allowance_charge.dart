@@ -3,6 +3,8 @@ import 'package:decimal/decimal.dart';
 import 'package:en16931/src/codes/vat_category.dart';
 
 /// Whether an amount is taken off the invoice or added to it.
+///
+/// {@category invoice}
 enum AllowanceOrCharge {
   /// Taken off. BG-20 at document level, BG-27 on a line.
   allowance,
@@ -60,6 +62,8 @@ final class DocumentAllowanceCharge {
 ///
 /// A line level allowance or charge has no VAT treatment of its own: it
 /// follows the VAT of the line it sits on.
+///
+/// {@category invoice}
 final class LineAllowanceCharge {
   /// An allowance or a charge of [amount] on the line.
   const LineAllowanceCharge({

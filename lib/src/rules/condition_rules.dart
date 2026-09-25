@@ -9,6 +9,8 @@ import 'package:en16931/src/rules/support.dart';
 /// These are the rules that catch an invoice that does not add up, and they
 /// are the ones a receiver rejects most often. What each compares is stated
 /// here against the semantic model.
+///
+/// {@category validation}
 const Map<String, RuleCheck> conditionRules = {
   'BR-CO-03': _brCo03,
   'BR-CO-09': _brCo09,

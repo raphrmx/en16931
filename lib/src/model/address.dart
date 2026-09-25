@@ -2,6 +2,8 @@
 ///
 /// Only the country is always required. The rest is what the parties need to
 /// find each other, and a profile may ask for more.
+///
+/// {@category invoice}
 final class Address {
   /// An address in [country], the rest being what is known of it.
   const Address({

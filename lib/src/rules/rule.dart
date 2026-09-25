@@ -1,4 +1,6 @@
 /// How a receiver treats an invoice that breaks a rule.
+///
+/// {@category validation}
 enum RuleSeverity {
   /// The invoice is rejected.
   fatal,
@@ -82,6 +84,8 @@ enum RuleFamily {
 /// that came to mind. What a rule means is implemented here, in Dart, against
 /// the semantic model: nothing of the artefacts themselves is carried into
 /// this package.
+///
+/// {@category validation}
 final class RuleDescriptor {
   /// The rule [id], of [family] and [severity], bearing on [terms].
   const RuleDescriptor({

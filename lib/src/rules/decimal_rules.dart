@@ -48,6 +48,8 @@ List<_Amount> _one(Decimal? value) =>
     value == null ? const [] : [(value, null)];
 
 /// Reads an amount off each document level allowance or charge of [kind].
+///
+/// {@category validation}
 List<_Amount> Function(Invoice) _documentEntries(
   AllowanceOrCharge kind,
   Decimal? Function(DocumentAllowanceCharge entry) read,
@@ -236,6 +238,8 @@ final List<_DecimalTerm> _terms = [
 /// what is checked is whether the amount can be written with two decimals at
 /// all. An amount that could be but was typed as `100.000` is the same amount
 /// here, and the syntax package decides how many decimals to write.
+///
+/// {@category validation}
 final Map<String, RuleCheck> decimalRules = {
   for (final term in _terms) term.id: term.check,
 };

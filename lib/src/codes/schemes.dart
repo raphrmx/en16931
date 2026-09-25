@@ -15,6 +15,8 @@
 /// The names below are the registers that come up. Any other code from the
 /// same list is written as it is, and `iso6523Icd` and `cefEasSchemes` say
 /// which codes each list holds.
+///
+/// {@category codes}
 abstract final class Scheme {
   /// 0002. The French SIRENE register.
   static const String sirene = '0002';

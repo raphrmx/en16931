@@ -1,3 +1,9 @@
+## 0.1.3
+
+- The API reference groups its 358 elements into four topics, The invoice,
+  Values, Code lists and Validation, each with a page of its own, instead of
+  one flat list. Nothing about the library changed.
+
 ## 0.1.2
 
 - The README lists `en16931_facturx` among the packages built on this one, and

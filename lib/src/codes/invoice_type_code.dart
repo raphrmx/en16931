@@ -4,6 +4,8 @@ import 'package:en16931/src/codes/code_value.dart';
 ///
 /// The code decides how the receiver books the document, and a profile
 /// narrows the list further. A credit note is a type, not a negative invoice.
+///
+/// {@category codes}
 final class InvoiceTypeCode extends CodeValue {
   /// Holds [value] as it appears in UNTDID 1001.
   const InvoiceTypeCode(super.value);

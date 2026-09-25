@@ -1,6 +1,8 @@
 import 'package:en16931/src/types/identifier.dart';
 
 /// BG-31. What is being sold on a line.
+///
+/// {@category invoice}
 final class Item {
   /// An item called [name].
   const Item({
@@ -42,6 +44,8 @@ final class Item {
 }
 
 /// BG-32. One property of an item, as a name and a value.
+///
+/// {@category invoice}
 final class ItemAttribute {
   /// The attribute called [name], whose value is [value].
   const ItemAttribute(this.name, this.value);

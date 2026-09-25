@@ -1,6 +1,8 @@
 import 'package:en16931/src/codes/code_value.dart';
 
 /// BT-81. How payment is expected, from UNTDID 4461.
+///
+/// {@category codes}
 final class PaymentMeansCode extends CodeValue {
   /// Holds [value] as it appears in UNTDID 4461.
   const PaymentMeansCode(super.value);

@@ -1,4 +1,6 @@
 /// A person or a department to write to. BG-6 and BG-9.
+///
+/// {@category invoice}
 final class Contact {
   /// A contact, of which at least one field is usually given.
   const Contact({this.name, this.telephone, this.email});

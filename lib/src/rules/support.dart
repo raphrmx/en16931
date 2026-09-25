@@ -5,6 +5,8 @@ import 'package:en16931/src/model/line.dart';
 import 'package:en16931/src/rules/rule.dart';
 
 /// Checks one rule against an invoice and reports what it finds.
+///
+/// {@category validation}
 typedef RuleCheck = Iterable<RuleViolation> Function(
     Invoice invoice, RuleDescriptor rule);
 
@@ -60,6 +62,8 @@ Iterable<RuleViolation> expectTotal({
 ///
 /// The standard states this twice, once in the BR family and once in BR-CO,
 /// so both call this and report under their own identifier.
+///
+/// {@category validation}
 Iterable<RuleViolation> documentReason(
   Invoice invoice,
   RuleDescriptor rule,
@@ -111,5 +115,7 @@ Iterable<RuleViolation> lineReason(
 /// amount is arrived at by applying a rate or by summing lines. It is not a
 /// cent: an invoice that rounds line by line lands a few cents away from one
 /// that rounds once, and both are accepted.
+///
+/// {@category validation}
 bool withinOneUnit(Decimal declared, Decimal expected) =>
     declared - Decimal.one < expected && declared + Decimal.one > expected;

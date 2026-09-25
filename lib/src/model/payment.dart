@@ -1,6 +1,8 @@
 import 'package:en16931/src/codes/payment_means_code.dart';
 
 /// BG-16. How the invoice is to be paid.
+///
+/// {@category invoice}
 final class PaymentInstructions {
   /// Payment expected by [means], with the details that go with it.
   const PaymentInstructions({
@@ -49,6 +51,8 @@ final class CreditTransferAccount {
 }
 
 /// BG-18. The card a payment was taken from.
+///
+/// {@category invoice}
 final class PaymentCard {
   /// The card whose number ends in [primaryAccountNumber].
   const PaymentCard(this.primaryAccountNumber, {this.holderName});

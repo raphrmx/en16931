@@ -6,6 +6,8 @@ import 'package:en16931/src/types/identifier.dart';
 ///
 /// The seller is the party whose VAT is accounted for, which is not always
 /// the party the money goes to: see [Payee].
+///
+/// {@category invoice}
 final class Seller {
   /// A seller called [name], at [address].
   const Seller({
@@ -56,6 +58,8 @@ final class Seller {
 }
 
 /// BG-7. The party buying the goods or services.
+///
+/// {@category invoice}
 final class Buyer {
   /// A buyer called [name], at [address].
   const Buyer({
@@ -114,6 +118,8 @@ final class Payee {
 }
 
 /// BG-11. The party that accounts for the seller's VAT in another country.
+///
+/// {@category invoice}
 final class TaxRepresentative {
   /// A tax representative called [name], registered under [vatIdentifier].
   const TaxRepresentative({

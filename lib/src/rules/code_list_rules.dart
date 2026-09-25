@@ -220,6 +220,8 @@ List<_Code> _lineReasonCodes(Invoice invoice, AllowanceOrCharge kind) {
 }
 
 /// The rules of the BR-CL family, which draw a code from a published list.
+///
+/// {@category validation}
 final Map<String, RuleCheck> codeListRules = {
   for (final term in _terms) term.id: term.check,
 };

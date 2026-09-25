@@ -27,6 +27,8 @@ final List<Map<String, RuleCheck>> _families = [
 /// Throws [ArgumentError] when the catalogue holds no such rule, which is how
 /// a rule implemented under an identifier the standard does not define is
 /// caught rather than run.
+///
+/// {@category validation}
 RuleDescriptor ruleFor(String id) {
   final rule = _byIdentifier[id];
   if (rule == null) {
@@ -72,6 +74,8 @@ Set<String> get accountedRules => {
 /// An empty list does not mean the invoice is compliant: only the rules this
 /// library states are checked, and [implementedRules] says which those are.
 /// Nothing here looks at a profile, which adds rules of its own.
+///
+/// {@category validation}
 List<RuleViolation> validate(Invoice invoice) {
   final violations = <RuleViolation>[];
   for (final family in _families) {

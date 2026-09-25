@@ -4,6 +4,8 @@
 /// the invoice, not an instant. Holding one in a `DateTime` moves it by a day
 /// as soon as it crosses a zone, so the model keeps the three fields it was
 /// given and never converts them.
+///
+/// {@category values}
 final class CalendarDate implements Comparable<CalendarDate> {
   /// The date of the given [year], [month] and [day].
   ///

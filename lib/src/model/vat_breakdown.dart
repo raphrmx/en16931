@@ -7,6 +7,8 @@ import 'package:en16931/src/codes/vat_category.dart';
 /// There is exactly one of these per pair of category and rate found on the
 /// invoice, lines and document level allowances and charges together. This is
 /// the part the tax authority reads, and the part most invoices get wrong.
+///
+/// {@category invoice}
 final class VatBreakdown {
   /// The [taxableAmount] taxed under [category] at [rate], coming to
   /// [taxAmount].

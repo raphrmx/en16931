@@ -24,6 +24,8 @@ import 'package:en16931/src/types/identifier.dart';
 /// issued with, down to the rounding. Building them from the lines is a
 /// separate step, and checking that they follow is what the business rules
 /// are for.
+///
+/// {@category invoice}
 final class Invoice {
   /// An invoice numbered [number], issued on [issueDate].
   const Invoice({
@@ -258,6 +260,8 @@ final class Invoice {
 }
 
 /// BG-1. A free text note about the invoice.
+///
+/// {@category invoice}
 final class InvoiceNote {
   /// The note [text], optionally about [subjectCode].
   const InvoiceNote(this.text, {this.subjectCode});

@@ -3,6 +3,7 @@
 .idea/
 .vscode/
 build/
+doc/api/
 pubspec.lock
 artefacts/
 tool/

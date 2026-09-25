@@ -14,6 +14,8 @@ typedef _Bracket = (VatCategory category, Decimal? rate);
 /// One entry comes out per pair of category and rate, which is what the
 /// standard asks for. The VAT of a category that charges none is zero, and
 /// [exemptionReasons] gives the reason those categories have to state.
+///
+/// {@category invoice}
 List<VatBreakdown> deriveBreakdown({
   required List<InvoiceLine> lines,
   required List<DocumentAllowanceCharge> entries,
@@ -79,6 +81,8 @@ bool _chargesVat(VatCategory category) => switch (category) {
     };
 
 /// The totals [lines], [entries] and [breakdown] add up to.
+///
+/// {@category invoice}
 InvoiceTotals deriveTotals({
   required List<InvoiceLine> lines,
   required List<DocumentAllowanceCharge> entries,

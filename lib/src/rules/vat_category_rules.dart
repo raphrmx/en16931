@@ -152,6 +152,8 @@ const List<_VatProfile> _profiles = [
 ];
 
 /// The rules that hold for one VAT category at a time.
+///
+/// {@category validation}
 final Map<String, RuleCheck> vatCategoryRules = {
   for (final profile in _profiles) ..._rulesOf(profile),
   'BR-IC-11': _brIc11,

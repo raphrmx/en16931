@@ -194,6 +194,8 @@ String _emit(Map<String, Set<String>> lists) {
       ..writeln('/// $description')
       ..writeln('///')
       ..writeln('/// ${codes.length} codes.')
+      ..writeln('///')
+      ..writeln('/// {@category codes}')
       ..writeln('const Set<String> $name = {');
     for (final code in codes) {
       buffer.writeln("  '$code',");

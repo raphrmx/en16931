@@ -8,6 +8,8 @@
 /// The media types an attachment may carry, which the standard narrows to six.
 ///
 /// 6 codes.
+///
+/// {@category codes}
 const Set<String> attachmentMimeTypes = {
   'application/pdf',
   'application/vnd.oasis.opendocument.spreadsheet',
@@ -20,6 +22,8 @@ const Set<String> attachmentMimeTypes = {
 /// The EAS list of electronic address schemes, published by the European Commission.
 ///
 /// 104 codes.
+///
+/// {@category codes}
 const Set<String> cefEasSchemes = {
   '0002',
   '0007',
@@ -130,6 +134,8 @@ const Set<String> cefEasSchemes = {
 /// ISO 3166-1 alpha-2 country codes.
 ///
 /// 251 codes.
+///
+/// {@category codes}
 const Set<String> iso3166Countries = {
   '1A',
   'AD',
@@ -387,6 +393,8 @@ const Set<String> iso3166Countries = {
 /// ISO 4217 alpha-3 currency codes.
 ///
 /// 178 codes.
+///
+/// {@category codes}
 const Set<String> iso4217Currencies = {
   'AED',
   'AFN',
@@ -571,6 +579,8 @@ const Set<String> iso4217Currencies = {
 /// ISO 6523 ICD, the schemes an organisation identifier is issued under.
 ///
 /// 243 codes.
+///
+/// {@category codes}
 const Set<String> iso6523Icd = {
   '0002',
   '0003',
@@ -820,6 +830,8 @@ const Set<String> iso6523Icd = {
 /// UNCL 5189 allowance reason codes.
 ///
 /// 19 codes.
+///
+/// {@category codes}
 const Set<String> uncl5189AllowanceReasons = {
   '100',
   '102',
@@ -845,6 +857,8 @@ const Set<String> uncl5189AllowanceReasons = {
 /// UNCL 5305 VAT category codes.
 ///
 /// 10 codes.
+///
+/// {@category codes}
 const Set<String> uncl5305VatCategories = {
   'AE',
   'B',
@@ -861,6 +875,8 @@ const Set<String> uncl5305VatCategories = {
 /// UN/ECE Recommendation 20 units of measure, with the Recommendation 21 extension.
 ///
 /// 2162 codes.
+///
+/// {@category codes}
 const Set<String> unece20UnitCodes = {
   '10',
   '11',
@@ -3029,6 +3045,8 @@ const Set<String> unece20UnitCodes = {
 /// UNTDID 1001, narrowed to the invoice and credit note codes.
 ///
 /// 62 codes.
+///
+/// {@category codes}
 const Set<String> untdid1001DocumentTypes = {
   '102',
   '130',
@@ -3097,6 +3115,8 @@ const Set<String> untdid1001DocumentTypes = {
 /// UNTDID 1153 reference qualifiers.
 ///
 /// 818 codes.
+///
+/// {@category codes}
 const Set<String> untdid1153ReferenceQualifiers = {
   'AAA',
   'AAB',
@@ -3921,6 +3941,8 @@ const Set<String> untdid1153ReferenceQualifiers = {
 /// UNTDID 2005, narrowed to the three codes that say when VAT falls due.
 ///
 /// 3 codes.
+///
+/// {@category codes}
 const Set<String> untdid2005VatPointDateCodes = {
   '3',
   '35',
@@ -3930,6 +3952,8 @@ const Set<String> untdid2005VatPointDateCodes = {
 /// UNTDID 4451 note subject codes.
 ///
 /// 383 codes.
+///
+/// {@category codes}
 const Set<String> untdid4451NoteSubjects = {
   'AAA',
   'AAB',
@@ -4319,6 +4343,8 @@ const Set<String> untdid4451NoteSubjects = {
 /// UNTDID 4461 payment means codes.
 ///
 /// 84 codes.
+///
+/// {@category codes}
 const Set<String> untdid4461PaymentMeans = {
   '1',
   '10',
@@ -4409,6 +4435,8 @@ const Set<String> untdid4461PaymentMeans = {
 /// UNTDID 7143 item classification schemes.
 ///
 /// 185 codes.
+///
+/// {@category codes}
 const Set<String> untdid7143ClassificationSchemes = {
   'AA',
   'AB',
@@ -4600,6 +4628,8 @@ const Set<String> untdid7143ClassificationSchemes = {
 /// UNTDID 7161 charge reason codes.
 ///
 /// 178 codes.
+///
+/// {@category codes}
 const Set<String> untdid7161ChargeReasons = {
   'AA',
   'AAA',
@@ -4784,6 +4814,8 @@ const Set<String> untdid7161ChargeReasons = {
 /// The VATEX list of VAT exemption reasons, published by the European Commission.
 ///
 /// 88 codes.
+///
+/// {@category codes}
 const Set<String> vatexExemptionReasons = {
   'VATEX-EU-132',
   'VATEX-EU-132-1A',

@@ -5,6 +5,8 @@ import 'package:en16931/src/codes/code_value.dart';
 ///
 /// The list runs to several thousand entries. The ones named here are the
 /// handful that carry most invoice lines.
+///
+/// {@category codes}
 final class UnitCode extends CodeValue {
   /// Holds [value] as it appears in UN/ECE Recommendation 20.
   const UnitCode(super.value);

@@ -3,6 +3,8 @@
 /// The standard puts the scheme in an attribute next to the value rather than
 /// in the value, and a profile usually decides which schemes it accepts. A
 /// VAT number is not one of these: it is a plain string on its own term.
+///
+/// {@category values}
 final class Identifier {
   /// The identifier [value], optionally issued under [scheme].
   const Identifier(this.value, {this.scheme});

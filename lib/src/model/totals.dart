@@ -5,6 +5,8 @@ import 'package:decimal/decimal.dart';
 /// Every one of these is arrived at by a rule the standard states, and the
 /// rules are checked rather than assumed: an invoice whose totals do not
 /// follow from its lines is rejected by the receiver, not corrected.
+///
+/// {@category invoice}
 final class InvoiceTotals {
   /// The totals, of which four are always required.
   const InvoiceTotals({
