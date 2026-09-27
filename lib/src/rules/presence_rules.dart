@@ -308,9 +308,8 @@ Iterable<RuleViolation> _br51(Invoice invoice, RuleDescriptor rule) sync* {
   final card = invoice.paymentInstructions?.card;
   if (card == null) return;
   final digits = card.primaryAccountNumber.replaceAll(RegExp(r'\D'), '');
-  // The card security standards allow the first six and the last four, so
-  // anything longer than ten digits is carrying more of the number than it
-  // may.
+  // The card security standards allow the first six digits and the last four,
+  // so anything longer than ten carries more of the number than it may.
   if (digits.length > 10) {
     yield at(
       rule,

@@ -45,9 +45,8 @@ final List<_CodeTerm> _terms = [
     'invoice type code (BT-3)',
     (invoice) => _one(invoice.typeCode.value),
   ),
-  // BR-CL-03 checks the currency an amount is written in. The model carries
-  // the currency once for the invoice and once for VAT accounting rather than
-  // on each amount, so it reads the same two terms as BR-CL-04 and BR-CL-05.
+  // The model carries the currency once for the invoice and once for VAT
+  // accounting, so BR-CL-03 reads the same terms as BR-CL-04 and BR-CL-05.
   _CodeTerm('BR-CL-03', 'currency (BT-5, BT-6)', (invoice) {
     return [..._one(invoice.currency), ..._one(invoice.vatAccountingCurrency)];
   }),

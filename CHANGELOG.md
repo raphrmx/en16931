@@ -1,3 +1,11 @@
+## 0.1.4
+
+- `homepage` points at the package's card on comapps.web.app, which lists
+  every package published under COMAPPS.
+- The README badge row carries a Live demo badge, the maintainer again, and a
+  licence badge in a colour of its own rather than the grey shields puts in
+  every label. Nothing about the library changed.
+
 ## 0.1.3
 
 - The API reference groups its 358 elements into four topics, The invoice,

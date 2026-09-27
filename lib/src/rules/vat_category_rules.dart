@@ -390,10 +390,7 @@ Iterable<RuleViolation> _taxableAmount(
   _VatProfile p,
 ) sync* {
   // Only a category that may appear more than once splits its taxable amount
-  // by rate. The others carry one entry, and the standard sums everything of
-  // that category into it without looking at a rate. Splitting them by rate
-  // too would report a breach whenever a document states a rate of zero on
-  // the breakdown and none on the lines, which is correct and common.
+  // by rate; the others take everything of that category into one entry.
   final byRate = p.cardinality == _Cardinality.atLeastOne;
 
   for (final (index, entry) in invoice.vatBreakdown.indexed) {

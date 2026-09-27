@@ -244,8 +244,7 @@ Iterable<RuleViolation> _brCo17(Invoice invoice, RuleDescriptor rule) sync* {
     }
 
     // The artefacts allow anything within one unit of currency here, not one
-    // cent: an invoice rounding line by line lands a few cents away from an
-    // invoice rounding once, and both are accepted.
+    // cent: rounding line by line and rounding once are both accepted.
     final expected = round2(
       entry.taxableAmount.abs() *
           (rate / Decimal.fromInt(100)).toDecimal(
@@ -306,8 +305,7 @@ Iterable<RuleViolation> _brCo20(Invoice invoice, RuleDescriptor rule) sync* {
 }
 
 // BR-CO-21 to BR-CO-24 say what BR-33, BR-38, BR-42 and BR-44 say. Both
-// identifiers are published, so both are reported: a receiver quoting one of
-// them should find it in the result.
+// identifiers are published, so both are reported.
 
 Iterable<RuleViolation> _brCo21(Invoice invoice, RuleDescriptor rule) sync* {
   yield* documentReason(invoice, rule, AllowanceOrCharge.allowance, 'BT-97',

@@ -84,9 +84,7 @@ Future<void> main(List<String> arguments) async {
 
   File(_output).writeAsStringSync(_emit(catalogue, versions));
 
-  // The emitted lists run past the column the formatter wraps at, so what is
-  // written and what is committed would differ by a reflow. Formatting here
-  // keeps them the same file, which is what lets the build compare them.
+  // Formatted here so the file matches the one the build compares it against.
   final formatted = Process.runSync('dart', ['format', _output]);
   if (formatted.exitCode != 0) {
     stderr.writeln('dart format failed: ${formatted.stderr}');
