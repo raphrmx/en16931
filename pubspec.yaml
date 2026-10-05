@@ -3,10 +3,12 @@ description: >-
   The European electronic invoice, EN 16931, as Dart objects. Builds and checks
   the semantic model the UBL and CII syntaxes both carry, with no XML and no
   network of its own.
-version: 0.1.4
-homepage: https://comapps.web.app/#en16931
+version: 0.1.5
+homepage: https://packages.comapps.be/#en16931
 repository: https://github.com/raphrmx/en16931
 issue_tracker: https://github.com/raphrmx/en16931/issues
+funding:
+  - https://www.paypal.com/donate/?hosted_button_id=ZN6D382YQAV5N
 topics:
   - einvoicing
   - en16931

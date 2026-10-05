@@ -1,3 +1,11 @@
+## 0.1.5
+
+- `homepage` and the Live demo badge point at packages.comapps.be, where the
+  demo site moved. The old address redirects there.
+- The badge row carries a PayPal donation badge, `funding` points pub.dev
+  at the same donation page, and the README ends on the other packages
+  COMAPPS publishes. Nothing about the library changed.
+
 ## 0.1.4
 
 - `homepage` points at the package's card on comapps.web.app, which lists
