@@ -1,3 +1,10 @@
+## 0.1.6
+
+- The README shows which packages to add for each kind of invoice, and how
+  the packages of the family build on one another. pub.dev shows the first
+  as a screenshot.
+- The tests read XML with `xml` 7. Nothing about the library changed.
+
 ## 0.1.5
 
 - `homepage` and the Live demo badge point at packages.comapps.be, where the
