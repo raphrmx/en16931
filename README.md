@@ -11,6 +11,8 @@
 The European electronic invoice as Dart objects, with the 223 business rules
 that decide whether a receiver accepts it.
 
+![Which en16931 packages for which invoice: build and check with en16931, then en16931_peppol and en16931_ubl over Peppol, en16931_ublbe for Belgian accounting, en16931_xrechnung for a German public body, en16931_facturx for a French invoice](https://public.comapps.be/packages/en16931/en16931_situations.svg)
+
 ## Install
 
 ```yaml
@@ -132,6 +134,8 @@ terms it bears on.
 ## More from COMAPPS
 
 The EN 16931 family:
+
+![The en16931 packages: the model, en16931_ubl and en16931_cii for the syntaxes, then the profiles built on them](https://public.comapps.be/packages/en16931/en16931.svg)
 
 | Package | What it does |
 | --- | --- |
