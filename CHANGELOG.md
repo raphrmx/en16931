@@ -1,3 +1,7 @@
+## 0.1.7
+
+- Add 0.1.6 changelog section
+
 ## 0.1.6
 
 - The README shows which packages to add for each kind of invoice, and how
